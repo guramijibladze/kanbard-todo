@@ -9,6 +9,7 @@ export class AppComponent {
   condition:boolean = true;
   formVisible:boolean = false;
   kanbard:boolean = false;
+  taskName: string[] = [];
 
   addInfromation(){
     this.condition = false;
@@ -16,7 +17,11 @@ export class AppComponent {
     this.kanbard = true;
   }
 
-  addFunction(){
+  addFunction(taskname:string){
+    this.taskName.push(taskname);
+    
+    console.log(this.taskName)
+    taskname = "";
     // this.condition = true;
     // this.condition = true;
   }
